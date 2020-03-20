@@ -1,0 +1,2 @@
+INFO: Initializing the window and first scene ( d:\school\graphicsframework1.2 with trackball\componentframework\gamescenemanager.cpp: 121)
+INFO: 1.13.0 ( d:\school\graphicsframework1.2 with trackball\componentframework\window.cpp: 66)

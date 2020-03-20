@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F2DCB53B-8983-41C9-844F-9845F3C1161A}</ProjectGuid>
+    <RootNamespace>ComponentFramework</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\GameDev\SDL2-devel-2.0.8-VC\SDL2-2.0.8\include;C:\GameDev\glew-2.1.0-win32\glew-2.1.0\include;C:\GameDev\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\School\GraphicsFramework1.2 with trackball\GameDev\glew-2.1.0-win32\glew-2.1.0\include;D:\School\GraphicsFramework1.2 with trackball\GameDev\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\include;D:\School\GraphicsFramework1.2 with trackball\GameDev\SDL2_mixer-devel-2.0.1-VC\SDL2_mixer-2.0.1\include;D:\School\GraphicsFramework1.2 with trackball\GameDev\SDL2_net-devel-2.0.1-VC\SDL2_net-2.0.1\include;D:\School\GraphicsFramework1.2 with trackball\GameDev\SDL2-devel-2.0.8-VC\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;SDL2main.lib;SDL2test.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>D:\School\GraphicsFramework1.2 with trackball\GameDev\glew-2.1.0-win32\glew-2.1.0\lib;D:\School\GraphicsFramework1.2 with trackball\GameDev\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib;D:\School\GraphicsFramework1.2 with trackball\GameDev\SDL2_mixer-devel-2.0.1-VC\SDL2_mixer-2.0.1\lib;D:\School\GraphicsFramework1.2 with trackball\GameDev\SDL2_net-devel-2.0.1-VC\SDL2_net-2.0.1\lib;D:\School\GraphicsFramework1.2 with trackball\GameDev\SDL2-devel-2.0.8-VC\SDL2-2.0.8\lib;$(SolutionDir)SDK_Source\OpenGL\lib;$(SolutionDir)SDK_Source\SDL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="GameSceneManager.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MMath.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="ObjLoader.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Scene1.cpp" />
+    <ClCompile Include="SceneEnvironment.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="SkyBox.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Trackball.cpp" />
+    <ClCompile Include="VMath.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Debug.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="GameSceneManager.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MMath.h" />
+    <ClInclude Include="ObjLoader.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Scene1.h" />
+    <ClInclude Include="SceneEnvironment.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="SkyBox.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Trackball.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="VMath.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="phongFrag.glsl" />
+    <None Include="phongVert.glsl" />
+    <None Include="reflectionFrag.glsl" />
+    <None Include="reflectionVert.glsl" />
+    <None Include="skyboxFrag.glsl" />
+    <None Include="skyboxVert.glsl" />
+    <None Include="textureFrag.glsl" />
+    <None Include="textureVert.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="log.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
